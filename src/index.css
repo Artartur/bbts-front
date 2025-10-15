@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary-pure: #465EFF;
+    --color-primary-light: #C2D6FF;
+    --color-primary-dark: #262E89;
+
+    --color-secondary-pure: #FCFC30;
+    --color-secondary-light: #FAFEC3;
+    --color-secondary-dark: #C9A905;
+
+    --color-neutral-lightest: #FAFAFA;
+    --color-neutral-lighter: #E4E4E7;
+    --color-neutral-light: #D4D4D8;
+    --color-neutral-medium: #71717B;
+    --color-neutral-dark: #3F3F46;
+    --color-neutral-darker: #27272A;
+    --color-neutral-darkest: #09090B;
+
+    --color-danger: #FF2E3B;
+    --color-success: #23D80A;
+    --color-warning: #F99207;
+}
+
+@layer base {
+    body {
+        @apply flex items-center justify-center w-screen h-dvh bg-primary-pure md:h-screen;
+    }
+
+    h1 {
+        @apply text-3xl font-bold;
+    }
+
+    h2 {
+        @apply text-2xl font-bold;
+    }
+
+    h3 {
+        @apply text-xl font-bold;
+    }
+
+    h4 {
+        @apply text-base font-bold;
+    }
+
+    h5 {
+        @apply text-sm font-bold;
+    }
+
+    h6 {
+        @apply text-xs font-bold;
+    }
+
+    p,
+    strong {
+        @apply text-base;
+    }
+}
+
+@layer components {
+    .col {
+        @apply flex flex-col;
+    }
+
+    .flex-center {
+        @apply flex items-center justify-center;
+    }
+
+    .flex-between {
+        @apply flex items-center justify-between;
+    }
+
+    .full-size {
+        @apply w-screen h-screen;
+    }
+
+    .row {
+        @apply flex;
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+}
